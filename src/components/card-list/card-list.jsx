@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Card from '../card/card'
 import './card-list.styles.css'
-class Cardlist extends Component {
-
-  render() {
-      const {monsters}=this.props
+const Cardlist=(props)=>{
+ const {monsters}=props
     return (
       <div className='card-list'>
           {monsters.map((monster)=>{
@@ -14,7 +12,6 @@ class Cardlist extends Component {
           )}
       </div>
     )
-  }
 }
 
 export default Cardlist

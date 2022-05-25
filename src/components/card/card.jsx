@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './card.styles.css'
-export default class card extends Component {
-  render() {
-      const {id,name,email}=this.props.monster;
+const card =(props)=> {
+      const {id,name,email}=props.monster;
     return (
         <div className="card-container" key={id}>
         <img src={`https://robohash.org/${id}?set=set2`} alt="monster" />
@@ -10,5 +9,7 @@ export default class card extends Component {
         <p>{email}</p>
       </div>
     )
-  }
+  
 }
+
+export default card
